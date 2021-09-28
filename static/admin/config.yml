@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: lanternbox/netlify-cms-testing
+  repo: lantern-andrew/netlify-cms-testing
   branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
