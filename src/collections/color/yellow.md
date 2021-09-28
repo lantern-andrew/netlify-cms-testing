@@ -1,0 +1,4 @@
+---
+templateKey: color
+title: Yellow
+---
