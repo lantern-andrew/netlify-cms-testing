@@ -1,4 +1,0 @@
----
-templateKey: color
-title: Grey
----

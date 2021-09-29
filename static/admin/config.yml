@@ -9,15 +9,13 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-local_backend: true
-
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'color'
-    label: 'Color'
-    folder: 'src/collections/color'
+  - name: 'designer'
+    label: 'Designer'
+    folder: 'src/content/designer'
     create: true
     slug: '{{slug}}'
     fields:
@@ -25,13 +23,13 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'color',
+          default: 'designer',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
 
-  - name: 'author'
-    label: 'Author'
-    folder: 'src/collections/author'
+  - name: 'collection'
+    label: 'Collection'
+    folder: 'src/content/collection'
     create: true
     slug: '{{slug}}'
     fields:
@@ -39,56 +37,41 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'author',
+          default: 'collection',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
       - {
-          label: 'Color',
-          name: 'color',
-          collection: 'color',
+          label: 'Designer',
+          name: 'designer',
+          collection: 'designer',
           value_field: '{{slug}}',
           search_fields: ['title'],
           display_fields: ['title'],
           widget: 'relation',
         }
+      - { label: 'Title', name: 'title', widget: 'string' }
 
-  - name: 'blog2'
-    label: 'Blog2'
-    folder: 'src/pages/blog2'
+  - name: 'product'
+    label: 'Product'
+    folder: 'src/content/product'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - {
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'blog-post-2',
+          default: 'product',
         }
       - {
-          label: 'Related',
-          name: 'related',
-          collection: 'blog2',
-          value_field: '{{slug}}',
-          search_fields: ['title'],
-          display_fields: ['title'],
-          widget: 'relation',
-        }
-      - {
-          label: 'Author',
-          name: 'author',
-          collection: 'author',
+          label: 'Collection',
+          name: 'collection',
+          collection: 'collection',
           value_field: '{{slug}}',
           search_fields: ['title'],
           display_fields: ['title'],
           widget: 'relation',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
-      - { label: 'Featured Image', name: 'featuredimage', widget: image }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
 
   - name: 'blog'
     label: 'Blog'

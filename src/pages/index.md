@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 blog2: 2021-09-28-lantern-post
-title: Great coffee with a conscience
+title: Great coffee with a conscience 2
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
