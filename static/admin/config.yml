@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: lantern-andrew/netlify-cms-testing
+  base_url: https://playful-sphenoid-alloy.glitch.me # change this to your OAuth server
   branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
