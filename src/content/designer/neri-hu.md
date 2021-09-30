@@ -1,4 +1,4 @@
 ---
 templateKey: designer
-title: Neri & Hu 2
+title: Neri & Hu
 ---
